@@ -1,0 +1,13 @@
+language: python
+python:
+  - "3.6"      # current default Python on Travis CI
+  
+# command to install dependencies
+install:
+  - pip install pywikibot
+
+# command to run tests
+script:
+  - python create.py
+  - python deprecated_elo.py
+  - python elo_script.py
