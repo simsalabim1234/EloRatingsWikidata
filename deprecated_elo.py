@@ -11,7 +11,9 @@ dataset_query = """SELECT DISTINCT ?item WHERE {
   FILTER(?rank != wikibase:DeprecatedRank) .
   FILTER(?date >= ?dod) .
 }"""
+
 for itemkey in pagegenerators.WikidataSPARQLPageGenerator(dataset_query, site=wikidata_site):
+    print('Input Output Putt kaputt')
     inputdata.append(itemkey.title())
 
 for i, item in enumerate(inputdata):
